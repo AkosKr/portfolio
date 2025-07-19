@@ -14,6 +14,16 @@
   --color-text-secondary: #434343;
   --color-text-project_primary: #FFFFFF;
   --color-bg: #F3F3F3;
+
+  --font-base: 'Sora';
+  --font-size-base: 1.5rem;
+  --font-size-lg: 2.25rem;
+  --fonts-size-md: 1.125rem;
+  --fonts-size-sm: 1rem;
+  --fonst-size-xs: 0.75rem;
+  
+  scroll-behavior: smooth;
+  /*overflow: hidden;*/
 }
 
 .light {
@@ -31,8 +41,9 @@
 }
 
 body {
-  font-family: 'Sora', sans-serif;
+  font-family: var(--font-base);
   background-color: var(--color-bg);
   color: var(--color-text-primary);
   transition: background-color 0.3s, color 0.3s;
 }
+

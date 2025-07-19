@@ -1,35 +1,74 @@
 import { useTheme } from "./hooks/useTheme";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
 
 function PortfolioGUI() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <>
-      <nav className="sticky top-0 place-items-center">
-        <ul className="flex flex-row gap-5">
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#skills">Skills</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <button onClick={toggleTheme}>{theme === 'light' ? 'Hold' : 'Nap'}</button>
-          </li>
-        </ul>
-      </nav>
-      <div id="about" className="">
-        <h1>About Me</h1>
-        <p>This is the about section...</p>
+    <div className="h-screen snap-y snap-mandatory overflow-scroll scroll-smooth scrollbar-hide">
+      <div className="sticky h-screen top-0 left-0 h-[0px] z-50">
+        <div className="flex flex-auto justify-around h-[100px] bg-bg">
+          <div></div>
+          <nav className="flex flex-row top-0 place-content-center">
+            <ul
+              className="flex flex-row gap-10 p-10 text-md text-text-primary"
+            >
+              <li className="hover:border-b-2 hover:border-text-primary">
+                <a href="#about">About</a>
+              </li>
+              <li className="hover:border-b-2 hover:border-text-primary">
+                <a href="#skills">Skills</a>
+              </li>
+              <li className="hover:border-b-2 hover:border-text-primary">
+                <a href="#projects">Projects</a>
+              </li>
+            </ul>
+          </nav>
+          <button
+            className="flex-none"
+            onClick={toggleTheme}
+          >
+            {theme === "light" ? (
+              <FontAwesomeIcon icon={faMoon} />
+            ) : (
+              <FontAwesomeIcon icon={faSun} />
+            )}
+          </button>
+        </div>
       </div>
-      <div id="projects" className="section">
-        <h1>Projects</h1>
-        <p>This is the projects section...</p>
+
+      <div
+        id="about"
+        className="snap-center snap-mandatory h-screen"
+      >
+        <div className="relative min-h-screen flex">
+            <div className="container max-w-screen-xl mx-auto flex justify-center items-center text-4xl ">
+                About
+            </div>
+        </div>      </div>
+      <div
+        id="skills"
+        className="snap-center snap-mandatory h-screen"
+      >
+        <div className="relative min-h-screen flex">
+            <div className="container max-w-screen-xl mx-auto flex justify-center items-center text-4xl ">
+                Skills
+            </div>
+        </div>
+
       </div>
-    </>
+      <div
+        id="projects"
+        className="snap-center snap-mandatory h-screen"
+      >
+        <div className="relative min-h-screen flex">
+            <div className="container max-w-screen-xl mx-auto flex justify-center items-center text-4xl ">
+                Projects
+            </div>
+        </div>
+      </div>
+    </div>
   );
 }
 

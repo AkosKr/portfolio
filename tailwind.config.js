@@ -13,10 +13,22 @@ export default {
           primary: 'var(--color-text-primary)',
           secondary: 'var(--color-text-secondary)',
           project_title: 'var(--color-text-project-primary)',
+        },
+        fontSize: {
+          xs: 'var(--font-size-xs)',
+          sm: 'var(--font-size-sm)',
+          md: 'var(--font-size-md)',
+          lg: 'var(--font-size-lg)',
+          base: 'var(--font-size-base)',
         }
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+  ],
+  future: {
+    hoverOnlyWhenSupported: true,
+  }
 }
 
