@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+:root {
+  /* Color palette */
+  --color-text-primary: #000000;
+  --color-text-secondary: #434343;
+  --color-text-project_primary: #FFFFFF;
+  --color-bg: #F3F3F3;
+
+  --font-base: 'Sora';
+  --font-size-base: 1.5rem;
+  --font-size-lg: 2.25rem;
+  --fonts-size-md: 1.125rem;
+  --fonts-size-sm: 1rem;
+  --fonst-size-xs: 0.75rem;
+  
+  scroll-behavior: smooth;
+  /*overflow: hidden;*/
+}
+
+.light {
+  --color-text-primary: #000000;
+  --color-text-secondary: #434343;
+  --color-text-project_primary: #FFFFFF;
+  --color-bg: #F3F3F3; 
+}
+
+.dark {
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #F3F3F3;
+  --color-text-project_primary: #FFFFFF;
+  --color-bg: #000000; 
+}
+
+body {
+  font-family: var(--font-base);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
