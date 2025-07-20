@@ -8,20 +8,20 @@ function PortfolioGUI() {
   return (
     <div className="h-screen snap-y snap-mandatory overflow-scroll scroll-smooth scrollbar-hide">
       <div className="sticky h-screen top-0 left-0 h-[0px] z-50">
-        <div className="flex flex-auto justify-around h-[100px] bg-bg">
+        <div className="flex flex-auto justify-around h-[100px] bg-bg items-center">
           <div></div>
           <nav className="flex flex-row top-0 place-content-center">
             <ul
               className="flex flex-row gap-10 p-10 text-md text-text-primary"
             >
-              <li className="hover:border-b-2 hover:border-text-primary">
-                <a href="#about">About</a>
+              <li>
+                <a className="hover:border-b-2 hover:border-text-primary" href="#about">About</a>
               </li>
-              <li className="hover:border-b-2 hover:border-text-primary">
-                <a href="#skills">Skills</a>
+              <li>
+                <a  className="hover:border-b-2 hover:border-text-primary" href="#skills">Skills</a>
               </li>
-              <li className="hover:border-b-2 hover:border-text-primary">
-                <a href="#projects">Projects</a>
+              <li>
+                <a  className="hover:border-b-2 hover:border-text-primary" href="#projects">Projects</a>
               </li>
             </ul>
           </nav>
