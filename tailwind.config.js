@@ -9,6 +9,7 @@ export default {
     extend: {
       colors: {
         bg: 'var(--color-bg)',
+        button: 'var(--color-button)',
         text: {
           primary: 'var(--color-text-primary)',
           secondary: 'var(--color-text-secondary)',

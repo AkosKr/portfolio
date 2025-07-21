@@ -12,45 +12,45 @@ function PortfolioGUI() {
         <div className="flex flex-auto w-full justify-around h-[100px] bg-bg items-center">
           <div className="w-[20px] h-[20px]"></div>
           <nav>
-            <ul className="flex flex-row gap-[50px] text-[18px] text-text-primary">
+            <ul className="flex flex-row gap-[20px] text-[16px] sm:gap-[50px] sm:text-[18px] text-text-primary">
               <li>
-                <a
-                  className="hover:border-b-2 hover:border-text-primary"
-                  href="#about"
-                >
+                <a className="hover-underline-animation" href="#about">
                   About
                 </a>
               </li>
               <li>
-                <a
-                  className="hover:border-b-2 hover:border-text-primary"
-                  href="#skills"
-                >
+                <a className="hover-underline-animation" href="#skills">
                   Skills
                 </a>
               </li>
               <li>
-                <a
-                  className="hover:border-b-2 hover:border-text-primary"
-                  href="#projects"
-                >
+                <a className="hover-underline-animation" href="#projects">
                   Projects
                 </a>
               </li>
             </ul>
           </nav>
-          <button className="flex-none" onClick={toggleTheme}>
-            {theme === "light" ? (
-              <FontAwesomeIcon className="w-[20px] h-[20px]" icon={faMoon} />
-            ) : (
-              <FontAwesomeIcon className="w-[20px] h-[20px]" icon={faSun} />
-            )}
-          </button>
+          <div className="flex place-items-center">
+            <div className="toggle-switch">
+              <label className="switch-label">
+                <input
+                  type="checkbox"
+                  className="checkbox"
+                  onClick={toggleTheme}
+                  checked={theme === "light" ? true : false}
+                />
+                <span className="slider"></span>
+              </label>
+            </div>
+          </div>
         </div>
       </header>
 
       <main className="flex-1 overflow-y-scroll snap-y snap-mandatory scroll-smooth scrollbar-hide">
-        <div id="about" className="snap-center snap-mandatory h-[110%] md:h-full">
+        <div
+          id="about"
+          className="snap-center snap-mandatory h-[110%] md:h-full"
+        >
           <About />
         </div>
         <div id="skills" className="snap-center snap-mandatory h-full">

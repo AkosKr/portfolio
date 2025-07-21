@@ -3,6 +3,8 @@ import Github from "/github.png";
 import Gitlab from "/gitlab.png";
 import Linkedin from "/linkedin.png";
 import { useCallback } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 function About() {
   const openGithub = useCallback(() => {
@@ -21,7 +23,7 @@ function About() {
   }, []);
 
   const openLinkedin = useCallback(() => {
-    window.open("https://github.com/AkosKr", "_blank");
+    /*window.open("https://github.com/AkosKr", "_blank");*/
   }, []);
 
   return (
@@ -32,7 +34,9 @@ function About() {
             <div className="flex flex-col w-[80%] sm:w-[70%] md:w-[70%] lg:w-1/2 h-full justify-around items-center">
               <div className="flex flex-col gap-5 w-[95%] sm:w-[90%] lg:w-[85%]">
                 <div className="flex flex-col gap-3">
-                  <h1 className="text-[36px] sm:text-[48px] md:text-[52px] xl:text-[64px] leading-none font-bold">HI,</h1>
+                  <h1 className="text-[36px] sm:text-[48px] md:text-[52px] xl:text-[64px] leading-none font-bold">
+                    HI,
+                  </h1>
                   <h1 className="text-[36px] sm:text-[48px] md:text-[52px] xl:text-[64px] leading-none font-bold">
                     I'm Akos Kranics
                   </h1>
@@ -43,30 +47,30 @@ function About() {
                   frameworks, and build applications that prioritize clarity,
                   reliability, and security.
                 </p>
-                <div className="flex flex-row gap-5 ">
+                <div className="flex flex-row gap-3 ">
                   <img
                     src={Github}
                     onClick={openGithub}
                     alt="GitHub"
-                    className="w-[32px] h-[32px] cursor-pointer rounded-md"
+                    className="w-[42px] h-[42px] p-1 rounded-md cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-gray-200"
                   />
                   <img
                     src={Gitlab}
                     onClick={openGitlab}
                     alt="Gitlab"
-                    className="w-[32px] h-[32px] cursor-pointer"
+                    className="w-[42px] h-[42px] p-1 rounded-md cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-gray-200"
                   />
                   <img
                     src={Gmail}
                     onClick={openGmail}
                     alt="Gmail"
-                    className="w-[32px] h-[32px] cursor-pointer"
+                    className="w-[42px] h-[42px] p-1 rounded-md cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-gray-200"
                   />
                   <img
                     src={Linkedin}
                     onClick={openLinkedin}
                     alt="LinkedIn"
-                    className="w-[32px] h-[32px] cursor-pointer"
+                    className="w-[42px] h-[42px] p-1 rounded-md cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-gray-200"
                   />
                 </div>
               </div>
@@ -78,9 +82,20 @@ function About() {
                 >
                   <button
                     type="button"
-                    className="border-2 rounded-xl p-2 bg-text-secondary text-white"
+                    className="border-2 border-light-gray dark:border-gray rounded-xl p-2 
+                 shadow-xl 
+                 transition-all duration-300 ease-in-out
+                 bg-button text-white dark:bg-button dark:text-black
+                 hover:scale-105 
+                 hover:shadow-lg hover:shadow-gray-500 
+                 dark:hover:shadow-light-gray"
                   >
                     Resume
+                    <FontAwesomeIcon
+                      className="pl-2"
+                      icon={faDownload}
+                      bounce
+                    />
                   </button>
                 </a>
               </div>
