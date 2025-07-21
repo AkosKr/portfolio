@@ -86,9 +86,9 @@ body {
   width: 100%;
   height: 25px;
   background-color: var(--dark);
-  border-radius: 25px;
+  border-radius: 12px;
   cursor: pointer;
-  border: 3px solid var(--dark);
+  border: 2px solid var(--dark);
 }
 
 .checkbox {
@@ -112,7 +112,7 @@ body {
 .slider::before {
   content: "";
   position: absolute;
-  top: 3px;
+  top: 4px;
   left: 5px;
   width: 12px;
   height: 12px;
