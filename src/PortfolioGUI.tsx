@@ -2,6 +2,7 @@ import { useTheme } from "./hooks/useTheme";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
 import About from "./components/About";
+import AboutMe from "./components/AboutMe";
 
 function PortfolioGUI() {
   const { theme, toggleTheme } = useTheme();
@@ -48,10 +49,15 @@ function PortfolioGUI() {
 
       <main className="flex-1 overflow-y-scroll snap-y snap-mandatory scroll-smooth scrollbar-hide">
         <div
-          id="about"
           className="snap-center snap-mandatory h-[110%] md:h-full"
         >
           <About />
+        </div>
+        <div
+          id="about"
+          className="snap-center snap-mandatory h-[110%] md:h-full"
+        >
+          <AboutMe />
         </div>
         <div id="skills" className="snap-center snap-mandatory h-full">
           <div className="relative min-h-screen flex">
