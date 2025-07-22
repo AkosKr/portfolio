@@ -103,6 +103,7 @@ function About() {
             <div className="flex w-[70%] lg:w-1/2 place-content-center">
               <img
                 src="cropped_circle_image.png"
+                alt="Kranics Ákos Photo"
                 className="w-[212px] h-[212px] sm:w-[312px] sm:h-[312px] md:w-[380px] md:h-[380px] xl:w-[425px] xl:h-[425px]"
               />
             </div>
