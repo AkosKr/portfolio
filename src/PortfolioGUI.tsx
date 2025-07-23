@@ -1,9 +1,8 @@
 import { useTheme } from "./hooks/useTheme";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
 import About from "./components/About";
 import AboutMe from "./components/AboutMe";
 import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 
 function PortfolioGUI() {
   const { theme, toggleTheme } = useTheme();
@@ -64,13 +63,12 @@ function PortfolioGUI() {
         >
           <Skills />
         </section>
-        <div id="projects" className="snap-center snap-mandatory h-full">
-          <div className="relative min-h-screen flex">
-            <div className="container max-w-screen-xl mx-auto flex justify-center items-center text-4xl ">
-              Projects
-            </div>
-          </div>
-        </div>
+        <section
+          id="projects"
+          className="snap-center snap-mandatory min-h-full flex flex-col justify-around"
+        >
+          <Projects />
+        </section>
       </main>
     </div>
   );

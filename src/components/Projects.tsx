@@ -1,0 +1,18 @@
+function Projects() {
+  return (
+    <>
+      <div className="min-h-full">
+        <div className="flex flex-col gap-6 lg:gap-20 max-w-screen-xl mx-auto my-10 md:my-auto pb-12">
+          <div className="flex justify-center">
+            <h1 className="text-[36px] sm:text-[48px] md:text-[52px] xl:text-[64px] leading-none font-bold">
+              Projects
+            </h1>
+          </div>
+          <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row w-full justify-around items-center"></div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Projects;
