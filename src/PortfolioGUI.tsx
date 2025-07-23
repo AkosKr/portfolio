@@ -48,17 +48,15 @@ function PortfolioGUI() {
       </header>
 
       <main className="flex-1 overflow-y-scroll snap-y snap-mandatory scroll-smooth scrollbar-hide">
-        <div
-          className="snap-center snap-mandatory h-[110%] md:h-full"
-        >
+        <section className="snap-center snap-mandatory min-h-full flex flex-col justify-around">
           <About />
-        </div>
-        <div
+        </section>
+        <section
           id="about"
-          className="snap-center snap-mandatory h-[110%] md:h-full"
+          className="snap-center snap-mandatory min-h-full flex flex-col justify-around"
         >
           <AboutMe />
-        </div>
+        </section>
         <div id="skills" className="snap-center snap-mandatory h-full">
           <div className="relative min-h-screen flex">
             <div className="container max-w-screen-xl mx-auto flex justify-center items-center text-4xl ">
