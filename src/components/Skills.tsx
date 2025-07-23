@@ -1,45 +1,45 @@
 import TechCard from "./TechCard";
-
-const skills = [
-  {
-    title: "Github",
-    path: "/github.png",
-    size: 32,
-  },
-  {
-    title: "Gitlab",
-    path: "/gitlab.png",
-    size: 32,
-  },
-];
+import { tech, other } from "../data/skills";
 
 function Skills() {
   return (
     <>
       <div className="min-h-full">
-        <div className="flex flex-col gap-6 lg:gap-20 max-w-screen-xl mx-auto my-10 md:my-auto pb-12">
+        <div className="flex flex-col gap-10 lg:gap-20 max-w-screen-xl mx-auto my-10 md:my-auto ">
           <div className="flex justify-center">
             <h1 className="text-[36px] sm:text-[48px] md:text-[52px] xl:text-[64px] leading-none font-bold">
               Skills
             </h1>
           </div>
-          <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row w-full justify-around items-center">
-            <div className="flex flex-col gap-12 sm:gap-16 w-[80%] sm:w-[70%] md:w-[70%] lg:w-1/2 h-full justify-around items-center">
-              <div className="flex justify-around items-end w-[100%] sm:w-[90%] lg:w-[85%] h-[70px] lg:h-[100px]">
-                {skills.map((skill) => (
+          <div className="flex flex-col gap-6 lg:flex-row w-full place-items-center">
+            <div className="flex flex-col gap-2 md:gap-4 w-[80%] sm:w-[70%] md:w-[70%] lg:w-1/2 h-full place-items-center">
+              <div className="flex flex-row flex-wrap gap-2 md:gap-4 w-full justify-center">
+                {tech.map((t) => (
                   <TechCard
-                    title={skill.title}
-                    picturePath={skill.path}
-                    imageSize={skill.size}
+                    title={t.title}
+                    picturePath={t.path}
+                    url={t.url}
                   />
                 ))}
               </div>
+              <div className="flex flex-row flex-wrap gap-2 md:gap-4 w-full justify-center">
+                {other.map((t) => (
+                  <TechCard
+                    title={t.title}
+                    picturePath={t.path}
+                    url={t.url}
+                  />
+                ))}
+              </div>
+              <div>
+                <p className="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] text-center">... and many more!</p>
+              </div>
             </div>
-            <div className="flex w-[70%] lg:w-1/2 place-content-center">
+            <div className="flex w-[70%] lg:w-1/2 h-full justify-center">
               <img
-                src="hacker.svg"
+                src="tech.svg"
                 alt="Kranics Ákos Photo"
-                className="w-[212px] h-[212px] sm:w-[312px] sm:h-[312px] md:w-[380px] md:h-[380px] xl:w-[425px] xl:h-[425px]"
+                className="w-[260px] h-[260px] sm:w-[350px] sm:h-[350px] md:w-[420px] md:h-[420px] xl:w-[480px] xl:h-[480px]"
               />
             </div>
           </div>
