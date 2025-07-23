@@ -19,6 +19,7 @@ function Skills() {
                     title={t.title}
                     picturePath={t.path}
                     url={t.url}
+                    projectImage={false}
                   />
                 ))}
               </div>
@@ -28,6 +29,7 @@ function Skills() {
                     title={t.title}
                     picturePath={t.path}
                     url={t.url}
+                    projectImage={false}
                   />
                 ))}
               </div>
