@@ -33,7 +33,7 @@ function AboutMe() {
               <div className="flex justify-around items-end w-[100%] sm:w-[90%] lg:w-[85%] h-[70px] lg:h-[100px]">
                 <Experience title="01" description="Years Experience" /> 
                 <Experience title="01" description="Projects Created" />  
-                <Experience title="XX" description="Certificates" /> 
+                <Experience title="XX" description="Certifications" /> 
               </div>
             </div>
           </div>
