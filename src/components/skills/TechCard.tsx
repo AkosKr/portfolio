@@ -1,19 +1,14 @@
 import { useCallback } from "react";
 import SkillTechImage from "./SkillTechImage";
-import ProjectTechImage from "./ProjectTechImage";
 
 type props = {
   title: string;
   picturePath: string;
   url: string;
-  projectImage: boolean;
 };
 
-function TechCard({ title, picturePath, url, projectImage }: props) {
+function TechCard({ title, picturePath, url }: props) {
   const openTech = useCallback(() => {
-    if (url === "") {
-      return;
-    }
     window.open(url, "_blank");
   }, []);
 
@@ -28,11 +23,7 @@ function TechCard({ title, picturePath, url, projectImage }: props) {
         </p>
       </div>
       <div>
-        {projectImage ? (
-          <ProjectTechImage path={picturePath} title={title} />
-        ) : (
-          <SkillTechImage path={picturePath} title={title} />
-        )}
+        <SkillTechImage path={picturePath} title={title} />
       </div>
     </div>
   );

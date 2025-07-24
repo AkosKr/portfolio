@@ -1,5 +1,5 @@
 import { projects } from "../data/projects"; 
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "./projects/ProjectCard";
 
 function Projects() {
   return (
@@ -11,7 +11,7 @@ function Projects() {
               Projects
             </h1>
           </div>
-          <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row w-full justify-around items-center">
+          <div className="flex flex-row flex-wrap gap-10 w-full justify-center items-center">
             {
               projects.map(p => 
                 <ProjectCard title={p.title} name={p.name} img={p.image} tech={p.tech} />

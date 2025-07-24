@@ -1,4 +1,4 @@
-import TechCard from "./TechCard";
+import TechCard from "./skills/TechCard";
 import { tech, other } from "../data/skills";
 
 function Skills() {
@@ -19,7 +19,6 @@ function Skills() {
                     title={t.title}
                     picturePath={t.path}
                     url={t.url}
-                    projectImage={false}
                   />
                 ))}
               </div>
@@ -29,7 +28,6 @@ function Skills() {
                     title={t.title}
                     picturePath={t.path}
                     url={t.url}
-                    projectImage={false}
                   />
                 ))}
               </div>
