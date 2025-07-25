@@ -1,0 +1,43 @@
+import { useRef, useEffect, ReactNode } from "react";
+
+type ModalProps = {
+  openModal: boolean;
+  closeModal: () => void;
+  children: ReactNode;
+};
+
+function Modal({ openModal, closeModal, children }: ModalProps) {
+  const ref = useRef<HTMLDialogElement | null>(null);
+
+  useEffect(() => {
+    const dialog = ref.current;
+    if (!dialog) return;
+
+    if (openModal) {
+      if (!dialog.open) {
+        dialog.showModal();
+      }
+    } else {
+      if (dialog.open) {
+        dialog.close();
+      }
+    }
+
+    const handleCancel = (e: Event) => {
+      e.preventDefault();
+      closeModal();
+    };
+
+    dialog.addEventListener("cancel", handleCancel);
+    return () => dialog.removeEventListener("cancel", handleCancel);
+  }, [openModal, closeModal]);
+
+  return (
+    <dialog ref={ref}>
+      {children}
+      <button onClick={closeModal}>Close</button>
+    </dialog>
+  );
+}
+
+export default Modal;

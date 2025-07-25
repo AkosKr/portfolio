@@ -1,4 +1,4 @@
-import { projects } from "../data/projects"; 
+import { projects, projectType } from "../data/projects"; 
 import ProjectCard from "./projects/ProjectCard";
 
 function Projects() {
@@ -13,8 +13,8 @@ function Projects() {
           </div>
           <div className="flex flex-row flex-wrap gap-10 w-full justify-center items-center">
             {
-              projects.map(p => 
-                <ProjectCard title={p.title} name={p.name} img={p.image} tech={p.tech} />
+              projects.map((p) => 
+                <ProjectCard project={p} />
               )
             }
           </div>
