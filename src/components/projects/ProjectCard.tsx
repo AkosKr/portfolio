@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import ProjectTechCard from "./ProjectTechCard";
 import Modal from "./Modal";
 import ModalContent from "./ModalContent";
@@ -10,11 +10,14 @@ type ProjectCardProps = {
 
 function ProjectCard({ project }: ProjectCardProps) {
   const [isOpen, setIsOpen] = useState(false);
+  
+  const closeModal = useCallback(() => setIsOpen(false),[]);
+
 
   return (
     <>
-      <Modal openModal={isOpen} closeModal={() => setIsOpen(false)}>
-        <ModalContent project={project}/>
+      <Modal openModal={isOpen} closeModal={closeModal}>
+        <ModalContent project={project} closeModal={closeModal}/>
       </Modal>
       <div
         onClick={() => setIsOpen(true)}
